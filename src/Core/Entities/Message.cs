@@ -12,4 +12,10 @@ public class Message : BaseEntity
     public DateTime? ReadAt { get; set; }
     public bool DeletedBySender { get; set; }
     public bool DeletedByReceiver { get; set; }
+
+    public User Sender { get; set; } = null!;
+    public User Receiver { get; set; } = null!;
+    public File? File { get; set; }
+    public Message? ParentMessage { get; set; }
+    public ICollection<Message> Replies { get; set; } = new List<Message>();
 }

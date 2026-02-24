@@ -20,4 +20,11 @@ public class User : BaseEntity
     public AdminPermission? AdminPermission { get; set; }
     public ICollection<File> ClientFiles { get; set; } = new List<File>();
     public ICollection<File> AssignedFiles { get; set; } = new List<File>();
+    public ICollection<Document> UploadedDocuments { get; set; } = new List<Document>();
+    public ICollection<Appointment> ClientAppointments { get; set; } = new List<Appointment>();
+    public ICollection<Appointment> AdminAppointments { get; set; } = new List<Appointment>();
+    public ICollection<Message> SentMessages { get; set; } = new List<Message>();
+    public ICollection<Message> ReceivedMessages { get; set; } = new List<Message>();
+    public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+    public ICollection<Activity> Activities { get; set; } = new List<Activity>();
 }

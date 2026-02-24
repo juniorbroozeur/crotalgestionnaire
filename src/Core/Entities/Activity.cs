@@ -12,4 +12,7 @@ public class Activity : BaseEntity
     public ActivityStatus Status { get; set; } = ActivityStatus.Todo;
     public ActivityPriority Priority { get; set; } = ActivityPriority.Medium;
     public DateTime? CompletedAt { get; set; }
+
+    public User Admin { get; set; } = null!;
+    public File? File { get; set; }
 }

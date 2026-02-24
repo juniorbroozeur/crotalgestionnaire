@@ -13,4 +13,6 @@ public class Notification : BaseEntity
     public bool IsRead { get; set; }
     public DateTime? ReadAt { get; set; }
     public string? ActionUrl { get; set; }
+
+    public User User { get; set; } = null!;
 }

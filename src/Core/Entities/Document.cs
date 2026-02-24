@@ -2,9 +2,8 @@ using Core.Enums;
 
 namespace Core.Entities;
 
-public class Document
+public class Document : BaseEntity
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
     public Guid FileId { get; set; }
     public string FileName { get; set; } = string.Empty;
     public string FilePath { get; set; } = string.Empty;
@@ -15,6 +14,8 @@ public class Document
     public bool IsVisibleToClient { get; set; } = true;
     public DocumentCategory Category { get; set; }
     public string? Description { get; set; }
-    public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
     public DateTime? DeletedAt { get; set; }
+
+    public File File { get; set; } = null!;
+    public User Uploader { get; set; } = null!;
 }

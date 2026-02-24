@@ -1,8 +1,7 @@
 namespace Core.Entities;
 
-public class FileChecklist
+public class FileChecklist : BaseEntity
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
     public Guid FileId { get; set; }
     public string StepName { get; set; } = string.Empty;
     public int StepOrder { get; set; }
@@ -10,4 +9,7 @@ public class FileChecklist
     public DateTime? CompletedAt { get; set; }
     public Guid? CompletedBy { get; set; }
     public string? Notes { get; set; }
+
+    public File File { get; set; } = null!;
+    public User? CompletedByUser { get; set; }
 }

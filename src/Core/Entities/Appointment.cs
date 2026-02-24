@@ -15,4 +15,8 @@ public class Appointment : BaseEntity
     public string? Notes { get; set; }
     public string? CancellationReason { get; set; }
     public bool ReminderSent { get; set; }
+
+    public User Client { get; set; } = null!;
+    public User Admin { get; set; } = null!;
+    public File? File { get; set; }
 }

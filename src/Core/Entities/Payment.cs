@@ -16,4 +16,8 @@ public class Payment : BaseEntity
     public string? RejectionReason { get; set; }
     public string? ReferenceNumber { get; set; }
     public string? Notes { get; set; }
+
+    public File File { get; set; } = null!;
+    public Document? ReceiptDocument { get; set; }
+    public User? Validator { get; set; }
 }

@@ -10,4 +10,7 @@ public class FileStepHistory : BaseEntity
     public Guid ValidatedBy { get; set; }
     public string? Comment { get; set; }
     public string? AttachmentsJson { get; set; }
+
+    public File File { get; set; } = null!;
+    public User ValidatedByUser { get; set; } = null!;
 }

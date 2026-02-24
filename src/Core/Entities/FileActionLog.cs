@@ -15,4 +15,8 @@ public class FileActionLog : BaseEntity
     public string? ResponseDataJson { get; set; }
     public string? ErrorMessage { get; set; }
     public int? DurationMs { get; set; }
+
+    public File File { get; set; } = null!;
+    public WorkflowAction? WorkflowAction { get; set; }
+    public User TriggeredByUser { get; set; } = null!;
 }

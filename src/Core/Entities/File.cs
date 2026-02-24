@@ -18,4 +18,12 @@ public class File : BaseEntity
 
     public User Client { get; set; } = null!;
     public User? AssignedAdmin { get; set; }
+    public ICollection<FileStepHistory> StepHistory { get; set; } = new List<FileStepHistory>();
+    public ICollection<Document> Documents { get; set; } = new List<Document>();
+    public ICollection<Payment> Payments { get; set; } = new List<Payment>();
+    public ICollection<FileChecklist> ChecklistItems { get; set; } = new List<FileChecklist>();
+    public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+    public ICollection<Message> Messages { get; set; } = new List<Message>();
+    public ICollection<Activity> Activities { get; set; } = new List<Activity>();
+    public ICollection<FileActionLog> ActionLogs { get; set; } = new List<FileActionLog>();
 }

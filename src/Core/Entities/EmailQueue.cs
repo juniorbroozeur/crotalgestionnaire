@@ -16,4 +16,7 @@ public class EmailQueue : BaseEntity
     public int MaxRetries { get; set; } = 3;
     public DateTime? SentAt { get; set; }
     public string? ErrorMessage { get; set; }
+
+    public File? File { get; set; }
+    public EmailTemplate? Template { get; set; }
 }
